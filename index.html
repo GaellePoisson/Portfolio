@@ -1,0 +1,267 @@
+<!--<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupérer les données du formulaire
+    $nom = htmlspecialchars(trim($_POST["nom"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars(trim($_POST["message"]));
+
+    // Validation
+    if (empty($nom) || empty($email) || empty($message)) {
+        echo "Veuillez remplir tous les champs.";
+        exit;
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Adresse email invalide.";
+        exit;
+    }
+
+    // Contenu de l'email
+    $to = "gaellepoisson.95@gmail.com"; 
+    $subject = "Nouveau message de $nom via le formulaire";
+    $body = "Nom: $nom\nEmail: $email\n\nMessage:\n$message";
+    $headers = "From: $email\r\nReply-To: $email";
+
+    // Envoi de l'email
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Message envoyé avec succès.";
+    } else {
+        echo "Erreur lors de l'envoi. Veuillez réessayer plus tard.";
+    }
+}
+?>-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaëlle Poisson</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#accueil" class="logo">Gaëlle
+        <span>Poisson </span></a>
+
+        <i class='bx  bx-menu' id="menu-icon"></i> 
+
+        <nav class="navbar">
+            <a href="#accueil" class="active">Accueil</a>
+            <a href="#education">Education</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+         </nav>
+    </header>
+
+    <section class="accueil" id="accueil">
+        <div class="accueil-content">
+            <h1> Bonjour, je suis <span>Gaëlle</span></h1>
+            <h3 class="text-animation">Je suis 
+                <span>à la recherche d'un stage</span></h3>
+            <p>Actuellement en deuxième année de BUT MMI. 
+            Je suis à la recherche d'un stage de 10 semaines 
+            dans le développement web. A partir du 20 avril 2026. 
+            En parallèle, je travaille en tant qu’animatrice dans 
+            la commune de Louvres. </p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/ga%C3%ABlle-poisson" target="_blank">
+                    <i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/GaellePoisson" target="_blank"> 
+                    <i class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="btn-group">
+                <a href="cv_gaellepoisson.pdf" class="btn" target="_blank">Mon CV</a>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
+         </div>
+            <div class="accueil-img">
+                <img src="portrait.jpg" alt="">
+            </div>
+    </section>
+    <section class="education" id="education">
+        <h2 class="titre">Education</h2>
+
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                    <div class="timeline-date">Depuis 2024</div>
+                    <div class="timeline-content">
+                        <h3>BUT MMI</h3>
+                        <p>IUT CYU Cergy, 
+                            Site Sarcelles (95) – 
+                            Deuxième année BUT MMI</p>
+                    </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                    <div class="timeline-date">Depuis 2024</div>
+                    <div class="timeline-content">
+                        <h3>Animatrice vacataire</h3>
+                        <p>ville de Louvres (95)</p>
+                    </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Baccalauréat</h3>
+                        <p>Spécialités NSI et SES, 
+                        ainsi que HGGSP en première.
+                        Option LCA (langues et cultures antique) 
+                        et maths complémentaires</p>
+                    </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>BAFA</h3>
+                        <p>Brevet d’Aptitude aux Fonctions d’Animateur.
+                        Seconde partie à la ville de Louvres. 
+                        Troisième partie: Animer 2.0.</p>
+                    </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Stage d'observation de seconde</h3>
+                        <p>Développement durable, mairie de Nîmes (30)</p>
+                    </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>Certification PSC1</h3>
+                        <p>Prévention et sécurité civique niveau 1.</p>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="competences" id="competences">
+        <h2 class="titre">Compétences</h2>
+
+        <div class="competences-container">
+            <div class="competences-box">
+                <div class="competences-info">
+                    <h4>Langages de programmation</h4>
+                    <img src="html.png" class="w-12 h-12 mx-auto object-contain" alt="HTML">
+                    <img src="css.png" class="w-12 h-12 mx-auto object-contain" alt="CSS">
+                    <img src="php.png" class="w-12 h-12 mx-auto object-contain" alt="PHP">
+                    <img src="sql.png"class="w-12 h-12 mx-auto object-contain"  alt="SQL">
+                    <img src="python.png"class="w-12 h-12 mx-auto object-contain"  alt="Python">
+                </div>
+            </div>
+
+            <div class="competences-box">
+                <div class="competences-info">
+                    <h4>Logiciels</h4>
+                    <img src="figma.png" class="w-12 h-12 mx-auto object-contain" alt="Figma">
+                    <img src="Photoshop.png" class="w-12 h-12 mx-auto object-contain" alt="Photoshop">
+                    <img src="Illustrator.png" class="w-12 h-12 mx-auto object-contain" alt="Illustrator">
+                    <img src="Aftereffects.png" class="w-12 h-12 mx-auto object-contain" alt="AfterEffects">
+                    <img src="DavInci.png" class="w-12 h-12 mx-auto object-contain" alt="DaVinci">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projets" id="projets">
+        <div class="projets-box">
+            <h2 class="titre">Projets</h2>
+
+            <div class="wrapper">
+                <div class="projets-item">
+                    <video controls>
+                        <source src="festival.mp4" type="video/mp4" />
+                    </video>
+                    <h2>Pastille vidéo festival "les talents de l'iut"</h2>
+                    <p>Création de pastille vidéo pour la communication 
+                        post-événement du festival sur les gagnants 
+                        des prix du public.</p>
+                </div>
+
+                <div class="projets-item">
+                    <img src="affiche1.png" alt="affiche new balance print">
+                    <img src="affiche2.png" alt="affiche new balance web">
+                    <h2>Visuels New Balance 9060</h2>
+                    <p>Création d'affiches pour une 
+                        marque choisie en respectant 
+                        sa charte graphique.</p>
+                </div>
+
+                <div class="projets-item">
+                    <img src="cinemaIDF.png" alt="">
+                    <h2>Site de visualisation de données des cinémas d'Ile-de-france</h2>
+                    <p>Apllication interactive javascript et jeu de données.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2 class="titre">Contactez- <span>Moi</span></h2>
+        <form action="">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder=" Nom Prénom">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Sujet">
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="" id="" cols="30" 
+                rows="10" placeholder="Votre Message"></textarea>
+                <input type="submit" value="Envoyer votre message">
+            </div>
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/ga%C3%ABlle-poisson" target="_blank">
+                    <i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/GaellePoisson" target="_blank"> 
+                    <i class='bx bxl-github'></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="#education">Education</a>
+            </li>
+             <li>
+                <a href="#competences">Compétences</a>
+            </li>
+             <li>
+                <a href="#projets">Projets</a>
+            </li>
+             <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            © Gaëlle Poisson - Tous droits réservés
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
