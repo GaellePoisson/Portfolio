@@ -1,35 +1,3 @@
-<!--<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
-    $nom = htmlspecialchars(trim($_POST["nom"]));
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars(trim($_POST["message"]));
-
-    // Validation
-    if (empty($nom) || empty($email) || empty($message)) {
-        echo "Veuillez remplir tous les champs.";
-        exit;
-    }
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Adresse email invalide.";
-        exit;
-    }
-
-    // Contenu de l'email
-    $to = "gaellepoisson.95@gmail.com"; 
-    $subject = "Nouveau message de $nom via le formulaire";
-    $body = "Nom: $nom\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: $email\r\nReply-To: $email";
-
-    // Envoi de l'email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Message envoyé avec succès.";
-    } else {
-        echo "Erreur lors de l'envoi. Veuillez réessayer plus tard.";
-    }
-}
-?>-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -160,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="competences-container">
             <div class="competences-box">
                 <div class="competences-info">
-                    <h4>Langages de programmation</h4>
+                    <h4>Langages de programmation</ha>
                         <img src="html.png" class="w-12 h-12 mx-auto object-contain" alt="HTML">
                         <img src="css.png" class="w-12 h-12 mx-auto object-contain" alt="CSS">
                         <img src="php.png" class="w-12 h-12 mx-auto object-contain" alt="PHP">
@@ -172,11 +140,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="competences-box">
                 <div class="competences-info">
                     <h4>Logiciels</h4>
-                    <img src="Figma.png" class="w-12 h-12 mx-auto object-contain" alt="Figma">
+                    <img src="figma.png" class="w-12 h-12 mx-auto object-contain" alt="Figma">
                     <img src="Photoshop.png" class="w-12 h-12 mx-auto object-contain" alt="Photoshop">
                     <img src="Illustrator.png" class="w-12 h-12 mx-auto object-contain" alt="Illustrator">
                     <img src="Aftereffects.png" class="w-12 h-12 mx-auto object-contain" alt="AfterEffects">
-                    <img src="Davinci.png" class="w-12 h-12 mx-auto object-contain" alt="DaVinci">
+                    <img src="DavInci.png" class="w-12 h-12 mx-auto object-contain" alt="DaVinci">
                 </div>
             </div>
         </div>
@@ -188,9 +156,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="wrapper">
                 <div class="projets-item">
-                    <video controls>
-                        <source src="festival.mp4" type="video/mp4" />
-                    </video>
+                     <iframe src="https://youtu.be/embed/ID/PpnKHEeN81o" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
                     <h2>Pastille vidéo festival "les talents de l'iut"</h2>
                     <p>Création de pastille vidéo pour la communication 
                         post-événement du festival sur les gagnants 
@@ -207,9 +177,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="projets-item">
-                    <img src="cinemaIDF.png" alt="">
+                    <img src="CinemaIDF.png" alt="">
                     <h2>Site de visualisation de données des cinémas d'Ile-de-france</h2>
                     <p>Apllication interactive javascript et jeu de données.</p>
+                </div>
+
+                <div class="projets-item">
+                    <img src="Webdoc.png" alt="">
+                    <h2>Création d'un webdocumentaire</h2>
+                    <p>Présentation d'un métier du numérique.</p>
+                </div>
+
+                  <div class="projets-item">
+                    <img src="" alt="">
+                    <h2>Site de visualisation de données des cinémas d'Ile-de-france</h2>
+                    <p>Apllication interactive javascript et jeu de données.</p>
+                </div>
+
+                  <div class="projets-item">
+                    <img src="" alt="">
+                    <h2>Maquette d'un site immobilier</h2>
+                    <p>Création d'une maquette pour la mise en avant d'une agence immobilière</p>
                 </div>
 
             </div>
@@ -217,32 +205,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
     
     <section class="contact" id="contact">
-        <h2 class="titre">Contactez- <span>Moi</span></h2>
-        <form action="">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" placeholder=" Nom Prénom">
-                    <input type="email" placeholder="Email">
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="Sujet">
-                </div>
-            </div>
-            <div class="input-group-2">
-                <textarea name="" id="" cols="30" 
-                rows="10" placeholder="Votre Message"></textarea>
-                <input type="submit" value="Envoyer votre message" class="btn">
-            </div>
-        </form>
+        <div class="contact-info-container">
+            <h2 class="titre">Contactez- <span>Moi</span></h2>
+            <p class="p-contact">
+                <a href="mailto:gaellepoisson.95@gmail.com" target="_blank">
+                    <i class='bxr  bxs-envelope'></i></a></p>
+        </div>
+        <div class="contact-info-container">
+            <p class="p-contact">
+                <a href="https://www.linkedin.com/in/ga%C3%ABlle-poisson"  target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-linkedin'></i></a></p>
+        </div>
     </section>
     
     <footer class="footer">
-        <div class="social">
-            <a href="https://www.linkedin.com/in/ga%C3%ABlle-poisson" target="_blank">
-                    <i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/GaellePoisson" target="_blank"> 
-                    <i class='bx bxl-github'></i></a>
-        </div>
 
         <ul class="list">
             <li>
@@ -265,5 +241,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="script.js"></script>
 </body>
 </html>
-
-
