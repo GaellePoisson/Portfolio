@@ -445,31 +445,56 @@ h3 span{
     font-size: 1.3rem;
 }
 
+/**CONTACT**/
+
 .contact{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    border-radius: 2rem;
-    border: 0.1rem solid var(--second-color);
-    border-color: var(--main-color);
+    padding: 5rem 12%;
     background: var(--bg-color);
-    margin:  2rem auto;
-    padding: 0.5rem;
 }
-
 
 .contact h2{
     margin-bottom: 3rem;
-    color: black;
+    color: var(--text-color);
+}
+.contact span{
+    color: var(--main-color);
 }
 
-.contact-info-container {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 0.5rem;
-margin:1rem;
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 5rem;
+    background: var(--bg-color);
+    border: 3px solid var(--main-color);
+    border-radius: 5rem;
+    max-width: 700px;
+    width: 100%;
 }
 
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.contact-link i {
+    font-size: 3rem;
+}
+
+.contact-link:hover {
+    color: var(--second-color);
+    transform: translateY(-3px);
+}
 /** FOOTER**/
 
 .footer{
