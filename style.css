@@ -364,7 +364,8 @@ h3 span{
 .competences-box:hover{
     background: var(--bg-color);
     color: rgb(0, 0, 0);
-    border: 5px solid var(--third-color);
+    border: 3px solid var(--third-color);
+    box-shadow: 0 0 25px var(--third-color);
     transform: scale(1.03);
 }
 
@@ -386,7 +387,7 @@ h3 span{
 }
 
 .logos-container {
-     display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -398,6 +399,7 @@ h3 span{
     height: 5rem;
     object-fit: contain;
     transition: 0.3s ease;
+    margin: 1.8rem;
 }
 
 .logos-container img:hover {
