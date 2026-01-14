@@ -423,8 +423,16 @@ h3 span{
     margin-bottom: 5rem;  
 }
 
-.projets-box img, iframe{
+.projets-box img{
     width: 20rem;
+}
+
+.projets-item iframe {
+    width: 100%; 
+    max-width: 30rem; 
+    height: 18rem;
+    border-radius: 1rem;
+    margin-bottom: 2.5rem; 
 }
 
 .wrapper{
@@ -459,7 +467,9 @@ h3 span{
 
 .projets-item h2{
     font-size: 2.8rem;
+    margin-bottom: 1.5rem;
 }
+
 .projets-item a {
     display: inline-block;
     margin-top: 2rem;
@@ -471,6 +481,7 @@ h3 span{
     font-size: 1.5rem;
     font-weight: 600;
     transition: 0.3s ease-in-out;
+    margin-bottom: 2.5rem;
 }
 
 .projets-item a:hover {
@@ -480,8 +491,31 @@ h3 span{
     transform: scale(1.05);
     box-shadow: 0 0 20px var(--third-color);
 }
+
 .projets-item p{
     font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.projets-item .logos-container {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; 
+    flex-wrap: nowrap; 
+    margin-top: 1rem;
+}
+
+.projets-item .logos-container img {
+    width: 4rem; 
+    height: 4rem;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+.logos-container img:hover {
+    transform: scale(1.2);
 }
 
 /**CONTACT**/
