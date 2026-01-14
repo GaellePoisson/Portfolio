@@ -7,7 +7,6 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
-
 }
 
 :root {
@@ -84,7 +83,6 @@ body{
 section{
     min-height: 100vh;
     padding: 10rem 12% 10rem;
-
 }
 
 .accueil{
@@ -278,10 +276,9 @@ h3 span{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color);
     position: absolute;
-    left: calc(50% - 8px);
+    left: calc(50% - 10.5px);
     border-radius: 50%;
     top: 10px;
-
 }
 
 .timeline-date{
@@ -355,10 +352,13 @@ h3 span{
 
 .competences-box{
     background-color: var(--main-color);
-    height: 300px;
+    min-height: 300px;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .competences-box:hover{
@@ -372,18 +372,17 @@ h3 span{
 .competences-box .competences-info{
     display: flex;
     flex-direction: column;
-    text-align: left;
-    max-height: 200px;
-    justify-content: left;
-    align-items: baseline;
-    padding: 5rem 5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    width: 100%;
 }
 
-
 .competences-info h4{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    line-height: 2;
+    margin-bottom: 2rem;
 }
 
 .logos-container {
@@ -391,15 +390,16 @@ h3 span{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
+    max-width: 100%;
 }
+
 .logos-container img {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     object-fit: contain;
     transition: 0.3s ease;
-    margin: 1.8rem;
 }
 
 .logos-container img:hover {
@@ -619,7 +619,7 @@ h3 span{
 }
 
 @media(max-width:991px){
-    header{
+    .header{
         padding: 2rem 3%;
     }
     section{
@@ -636,21 +636,21 @@ h3 span{
     .timeline-item:nth-child(even){
         padding-left: 37px;
     }
-    .timeline-dot{
+    .timeline-point{
         left: 0;
     }
     .competences{
         padding-bottom: 7rem;
     }
     .projets .wrapper{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
     .footer{
         padding: 2rem 3%;
     }
 }
 
-@media(max-width:985px){
+@media(max-width:895px){
     #menu-icon{
         display: block;
     }
@@ -660,14 +660,14 @@ h3 span{
         right: 0;
         width: 50%;
         padding: 1rem 3%;
-        background: white;
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
         display: none;
     }
-    .navbar .active{
+    .navbar.active{
         display: block;
     }
     .navbar a{ 
@@ -676,23 +676,33 @@ h3 span{
         margin: 3rem 0;
         color: black;
     }
-    .home{
-        flex-direction: column-reverse;
-        margin: 5rem 4rem;
+    .accueil{
+        flex-direction: column;
+        gap: 3rem;
+        margin: 5rem 0;
+        text-align: center;
     }
-    .home-content h3{
+    .accueil-content{
+        align-items: center;
+    }
+    .accueil-content h3{
         font-size: 2.6rem;
     }
-    .home-content h1{
-        font-size: 8rem;
-        margin-top: 3rem;
+    .accueil-content h1{
+        font-size: 5rem;
+        margin-top: 2rem;
     }
-    .home-content p{
+    .accueil-content p{
         max-width: 600px;
         margin: 0 auto;
     }
-    .home-img img{
-        width: 56vw;
+    .accueil-img{
+        order: -1;
+    }
+    .accueil-img img{
+        width: 70vw;
+        max-width: 350px;
+        top: 0;
     }
     .competences h2{
          margin-bottom: 3rem;
@@ -700,5 +710,33 @@ h3 span{
     .competences-container{
         grid-template-columns: repeat(1,1fr);
     }
+    .competences-info h4{
+        font-size: 2.2rem;
+    }
+    .logos-container img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .projets .wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 
+@media(max-width:600px){
+    html{
+        font-size: 50%;
+    }
+    .titre{
+        font-size: 5rem;
+    }
+    .navbar{
+        width: 70%;
+    }
+    .accueil-content h1{
+        font-size: 4rem;
+    }
+    .projets-item{
+        padding: 2rem;
+        min-height: auto;
+    }
+}
