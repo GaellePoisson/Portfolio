@@ -7,7 +7,7 @@
 ## 📋 Description
 
 Création de mon portfolio pour mettre en avant mes projets et compétences.
-**Lien du site** : (https://gaellepoisson.github.io/Portfolio/)
+👉 **Lien du site** : https://gaellepoisson.github.io/Portfolio/
 
 
 ---
