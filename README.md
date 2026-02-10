@@ -7,6 +7,8 @@
 ## 📋 Description
 
 Création de mon portfolio pour mettre en avant mes projets et compétences.
+**Lien du site** : (https://gaellepoisson.github.io/Portfolio/)
+
 
 ---
 
@@ -31,4 +33,3 @@ Création de mon portfolio pour mettre en avant mes projets et compétences.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gaëlle-poisson)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GaellePoisson)
-👉 Lien du site : https://gaellepoisson.github.io/Portfolio/
